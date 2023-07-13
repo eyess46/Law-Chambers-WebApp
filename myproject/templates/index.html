@@ -1,0 +1,207 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>David Steven Chambers</title>
+		
+		<!-- Loading third party fonts -->
+		<link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/novecento-font/novecento-font.css' %}" rel="stylesheet" >
+
+		<!-- Loading main css file -->
+		<link href="{% static 'style.css' %}" rel="stylesheet" >
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+		
+		<div id="site-content">
+			
+			<header class="site-header">
+				<div class="container">
+					<a href="/" id="branding">
+						<img src="{% static 'images/logo.png' %}" alt="Company Name" class="logo">
+						<div class="branding-copy">
+							<h1 class="site-title">David Steven Chambers</h1>
+							<em><small style="color:rgb(114, 114, 15)" class="site-description">We Are Always At Your Services</small></em>
+						</div>
+					</a>
+
+					<nav class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href=" / ">Home</a></li>
+							<li class="menu-item"><a href="about">About Us</a></li>
+							<li class="menu-item"><a href="service">Service</a></li>
+							<li class="menu-item"><a href="contact">Contact</a></li>
+						</ul>
+					</nav>
+					<nav class="mobile-navigation"></nav>
+				</div>
+			</header> <!-- .site-header -->
+			{% for message in messages %}
+            <h2 align="center">{{ message }}</h2>
+            {% endfor %}
+
+			<main class="main-content">
+				<div class="hero">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<figure><img src="{% static 'dummy/lawyers.jpg' %}" alt=""></figure>
+							</div>
+							<div class="col-md-4">
+								<div class="hero-content">
+									<h1 class="hero-title">David Steven Chambers</h1>
+									<p>" Efficiently recommended law Firm, Our firm exceed clients expectations and consistently demostrate deep business understanding "</p>
+									<a style="color: #ac8074" href="about" class="button">Read more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .hero-slider -->
+				
+				<div class="fullwidth-block" data-bg-color="#111113">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<h2>We are Always At Your Service</h2>
+								<p>We are a top-notch litigation team that can not only manage a ligation, but also take it all the way through trial and WiN. We are extreamly proud to have help more clients both internationally and national court proceedings.</p>
+								<figure class="team-image"><img src="{% static 'dummy/logo.png' %}" alt="person-1"></figure>
+							</div>
+							<div class="col-md-4">
+								<div class="latest-news">
+									<em><h3 style="color: rgb(21, 92, 224)">Latest News</h3></em>
+									{% for new in news %}
+									<ul>
+										<li>
+											<em><h3 style="color: rgb(24, 92, 219)" class="entry-title"><a href="#">{{ new.newsdetails }}</a></h3></em>
+											<small style="color: rgb(59, 88, 88)" class="date">{{ new.posted_at }}</small>
+										</li>
+									</ul>
+									{% endfor %}
+								</div> <!-- .latest-news -->
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- .fullwidth-block -->
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row feature-list-section">
+							{% for feature in features %}
+							<div class="col-md-4">
+								<div class="feature">
+									<header>
+										<img src="{% static 'images/icon-1.png' %}" class="feature-icon"><br>
+										<div class="feature-title-copy">
+											<h2 class="feature-title">{{ feature.name }}</h2>
+											<em><small  style="color: rgb(114, 114, 15)"class="feature-subtitle">David Steven Chambers</small></em>
+										</div>
+									</header>
+									<em><p>{{ feature.details|truncatewords:6}}</p></em>
+									<a href="service" class="more-link">Read More</a>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+						<div class="quote-section">
+							<em><h3 style="color: rgb(114, 114, 15)" align="center" class="team-name">Great Testimonies</h3></em>
+							<div class="quote-slider">
+								<ul class="slides">
+									<li>
+										<figure class="quote-avatar"><img src="{% static 'dummy/logo.png' %}"></figure>
+										<blockquote>
+											<em><p style="color: yellow">" An exceptional chamber that have a very strong instincts and great mastery of complex judicial matters "</p></em>
+											<footer>
+												<p align="right" style="color: rgb(114, 114, 15)">---Mitchel Petit</p>
+											</footer>
+										</blockquote>
+									</li>
+									<li>
+										<figure class="quote-avatar"><img src="{% static 'dummy/logo.png' %}"></figure>
+										<blockquote>
+											<em><p style="color: yellow">" Outstanding professional with a unique set of skils to address the toughest challenges in securing various international and local agreements contracts " </p></em>
+											<footer>
+												<p align="right" style="color: rgb(114, 114, 15)">---John Kendrick</p>
+											</footer>
+										</blockquote>
+									</li>
+									<li>
+										<figure class="quote-avatar"><img src="{% static 'dummy/logo.png' %}"></figure>
+										<blockquote>
+											<em><p style="color: yellow">" David Steven Chambers is efficiently recommended for there expertise as it pertains to federla and State defense "</p></em>
+											<footer>
+												<p align="right" style="color: rgb(114, 114, 15)">---Yao Son KIM</p>
+											</footer>
+										</blockquote>
+									</li>
+									<li>
+										<figure class="quote-avatar"><img src="{% static 'dummy/logo.png' %}"></figure>
+										<blockquote>
+											<em><p style="color: yellow">" They are optimistic and have got great sense of navigating the regulatory framework and the need to address concerns of the regulators, as well as being sensitive and responsive to the business needs and wants "</p></em>
+											<footer>
+												<p align="right" style="color: rgb(114, 114, 15)">---Dwain Kindlebeger</p>
+											</footer>
+										</blockquote>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div align="center" class="container">
+					<figure class="team-image"><img src="{% static 'dummy/logo.png' %}" alt="person-1"></figure>
+					<h3 align="center" class="team-name">David Steven Chambers</h3>
+				</div>
+
+			</main> <!-- .main-content -->
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="subscribe-form">
+						<form action="#">
+							<label for="#">
+								<span>Do you want to get news?</span>
+								<span>Join our news letter</span>
+							</label>
+							<div class="control">
+								<input type="text" placeholder="Enter your email to subscribe...">
+								<button type="submit"><img src="{% static 'images/icon-envelope.png' %}" alt=""></button>
+						</form>
+							</div>
+					</div>
+					<div class="social-links">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+					</div>
+					<div class="copy">
+						<p>Copyright David Steven Chambers. All rights reserved.</p>
+					</div>
+				</div>
+			</footer> <!-- .site-footer -->
+
+		</div> <!-- #site-content -->
+
+		
+
+		<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/app.js' %}"></script>
+		
+	</body>
+
+</html>

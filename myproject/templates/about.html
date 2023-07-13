@@ -1,0 +1,112 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>David Steven Chambers | About Us</title>
+		
+		<!-- Loading third party fonts -->
+		<link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/novecento-font/novecento-font.css' %}" rel="stylesheet" >
+
+		<!-- Loading main css file -->
+		<link href="{% static 'style.css' %}" rel="stylesheet" >
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+		
+		<div id="site-content">
+			
+			<header class="site-header">
+				<div class="container">
+					<a href=" / " id="branding">
+						<img src="{% static 'images/logo.png' %}" alt="Company Name" class="logo">
+						<div class="branding-copy">
+							<h1 class="site-title">David Steven Chambers</h1>
+							<em><small style="color:rgb(114, 114, 15)" class="site-description">We Are Always At Your Services</small></em>
+						</div>
+					</a>
+
+					<nav class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item"><a href=" / ">Home</a></li>
+							<li class="menu-item current-menu-item"><a href="about">About Us</a></li>
+							<li class="menu-item"><a href="service">Service</a></li>
+							<li class="menu-item"><a href="contact">Contact</a></li>
+						</ul>
+					</nav>
+					<nav class="mobile-navigation"></nav>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+				<div align="center" class="container">
+					<figure class="team-image"><img src="{% static 'dummy/logo.png' %}" alt="person-1"></figure>
+				</div>
+				<div class="fullwidth-block content">
+					<div class="container">
+						<h2 align="center" class="entry-title">David Steven Chambers</h2>
+						<em><p>David Steven Chambers, a leading criminal, civil, trade and international trade control chambers, advises clients on local-international cross-border investment, trade and security matters.<br> David Steven Chambers advises foreign and domestic clients on comples US & Europian national security regulatory issues.</p></em>
+                        <em><p>David Steven Chambers have extensive experience representing clients in all aspects of national and security reviews. We have represented clients in various landmark matters and brings experience in negotiating some of the most significant national and international security agreements worldwide.</p></em>
+						<em><p>We also advice clients on export control and economic sactions issues in mergers, acquisitions, trading and divestitures.</p></em>
+						<em><p>David Steven Chambers accurately represents clients on FEDERAL, STATE & INTERNATIONAL court letigations and maintain an active pro bono practice also. Our work also includes advising clients in victim compensations, trading and immigrations matters</p></em>
+						<div class="container">
+							<figure class="team-image"><img src="{% static 'images/team-2.jpg' %}" alt="person-1"></figure>
+							<h3 align="center" class="team-name">David Steven Chambers</h3>
+							<p align="center"> Over 35 years of A-List ranks among the very top-performing firms accross finiancial, cultural measures.</p>
+						</div>
+					</div>
+				</div>
+
+			</main> <!-- .main-content -->
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="subscribe-form">
+						<form action="#">
+							<label for="#">
+								<span>Do you want to get news?</span>
+								<span class>Join our news letter</span>
+							</label>
+							<div class="control">
+								<input type="text" placeholder="Enter your email to subscribe...">
+								<button type="submit"><img src="{% static 'images/icon-envelope.png' %}" alt=""></button>
+						</form>
+							</div>
+					</div>
+					<div class="social-links">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+					</div>
+					<div class="copy">
+						<p>Copyright David Steven Chambers. All rights reserved.</p>
+					</div>
+				</div>
+			</footer> <!-- .site-footer -->
+
+		</div> <!-- #site-content -->
+
+		
+
+		<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/app.js' %}"></script>
+		
+	</body>
+
+</html>
